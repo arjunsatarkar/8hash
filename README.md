@@ -1,0 +1,23 @@
+# 8hash
+
+A consistent "magic 8-ball" that chooses the result based on a hash of the input string, so that it always returns the same result when given the same input (or fails to return a concrete answer).
+
+Since the standard non-committal answers in a magic 8-ball indicate that you should try again later, we first randomly decide if we should use a non-committal answer or not, and only if not, use the hash of the input to pick an unchanging committal answer.
+
+We use the "djb2" hash function because of its simplicity.
+
+## Rationale
+
+It is somewhat strange that magic 8-balls, both physical and digital, can return opposite responses to the same question. At least in the digital case, we can mitigate this.
+
+Of course, if you get an answer not to your liking, you can reword your query to try for a new one.
+
+## Usage
+
+Run `./eight_hash.py` for interactive use, or `import eight_hash` to use as a library. We have to spell out eight because identifiers can't start with a number :(.
+
+## Copying
+
+The author of this software is Arjun Satarkar.
+
+This software can be used under the CC0 1.0 Universal. See the COPYING.txt file for the full text.
