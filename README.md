@@ -12,9 +12,11 @@ It is somewhat strange that magic 8-balls, both physical and digital, can return
 
 Of course, if you get an answer not to your liking, you can reword your query to try for a new one.
 
-## Usage
+## Usage and info
 
 Run `./eight_hash.py` for interactive use, or `import eight_hash` to use as a library. We have to spell out eight because identifiers can't start with a number :(.
+
+This is a simple script in Python 3. The code style is the defaults of the `black` code formatter.
 
 ## Copying
 
