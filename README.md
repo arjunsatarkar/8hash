@@ -16,8 +16,6 @@ Of course, if you get an answer not to your liking, you can reword your query to
 
 Run `./eight_hash.py` for interactive use, or `import eight_hash` to use as a library. We have to spell out eight because identifiers can't start with a number :(.
 
-This is a simple script in Python 3. The code style is the defaults of the `black` code formatter.
-
 ## Copying
 
 The author of this software is Arjun Satarkar.
