@@ -33,18 +33,18 @@ non_committal_responses = [
 ]
 
 
-def djb2_hash(text):
+def djb2_hash(text: str):
     res = ctypes.c_uint64(5381)
     for c in text:
         res = ctypes.c_uint64(res.value * 33 + ord(c))
     return res.value
 
 
-def get_committal_response(question):
+def get_committal_response(question: str) -> str:
     return committal_responses[djb2_hash(question) % len(committal_responses)]
 
 
-def get_response(question):
+def get_response(question: str) -> str:
     if random.random() < len(non_committal_responses) / len(committal_responses):
         return random.choice(non_committal_responses)
     else:
