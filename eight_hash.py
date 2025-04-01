@@ -56,4 +56,5 @@ if __name__ == "__main__":
         while True:
             print(get_response(input("> ")))
     except (KeyboardInterrupt, EOFError):
+        print()
         sys.exit(0)
