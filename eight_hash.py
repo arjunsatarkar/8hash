@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import ctypes
 import random
 import sys
 
@@ -33,10 +34,10 @@ non_committal_responses = [
 
 
 def djb2_hash(text):
-    res = 5381
+    res = ctypes.c_uint64(5381)
     for c in text:
-        res = res * 33 + ord(c)
-    return res
+        res = ctypes.c_uint64(res.value * 33 + ord(c))
+    return res.value
 
 
 def get_committal_response(question):
