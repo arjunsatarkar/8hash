@@ -34,9 +34,9 @@ non_committal_responses = [
 
 
 def djb2_hash(text: str):
-    res = ctypes.c_uint64(5381)
+    res = ctypes.c_uint32(5381)
     for c in text:
-        res = ctypes.c_uint64(res.value * 33 + ord(c))
+        res = ctypes.c_uint32(res.value * 33 + ord(c))
     return res.value
 
 
